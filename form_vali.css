@@ -1,0 +1,22 @@
+.page-center-grid{
+    display:grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.full-height{
+    min-height:100vh;
+}
+
+.form-flex{
+    display:flex;
+    flex-direction: column;
+}
+
+.border-black{
+    border:1x solid black;
+}
+
+input{
+    margin-bottom:10px;
+}

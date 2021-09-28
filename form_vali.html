@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Form Validation</title>
+    <link rel="stylesheet" href='form_vali.css'>
+</head>
+
+<html>
+    <body>
+        <section class='page-center-grid full-height'>
+            <form>
+                <fieldset class='form-flex'>
+                    <label for='email'>Email: </label>
+                    <input type='email' id='email'>
+
+                    <label for='country'>Country: </label>
+                    <input type="text" list='countrys' id='country' pattern='[A-Za-z]+'>
+
+                    <datalist id='countrys'>
+                        <option value="USA">
+                        <option value='Canada'>
+                        <option value="UK"></option>
+                        <option value="Brazil"></option>
+                    </datalist>
+
+                    <label for='zip'>Zip-code: </label>
+                    <input type='number' id='zip' pattern='[0-9]' maxlength="5">
+
+                    <label for='password'>Password: </label>
+                    <input type='password' id='password'>
+
+                    <label for='password-confirm'>Confirm Password: </label>
+                    <input type='password' id='password-confirm'>
+
+                    <input type='submit' value='Save'>
+                </fieldset>   
+            </form>
+        </section>
+    </body>
+    <script src='form_vali.js'></script>
+</html>
