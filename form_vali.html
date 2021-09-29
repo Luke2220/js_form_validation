@@ -8,31 +8,32 @@
 <html>
     <body>
         <section class='page-center-grid full-height'>
-            <form>
+            <form novalidate>
+                <h2>Form Validation</h2>
                 <fieldset class='form-flex'>
                     <label for='email'>Email: </label>
-                    <input type='email' id='email'>
+                    <input type='email' id='email' required>
 
                     <label for='country'>Country: </label>
-                    <input type="text" list='countrys' id='country' pattern='[A-Za-z]+'>
+                    <input type="text" list='countrys' id='country' pattern='[A-Za-z]+' required>
 
                     <datalist id='countrys'>
                         <option value="USA">
                         <option value='Canada'>
-                        <option value="UK"></option>
-                        <option value="Brazil"></option>
+                        <option value="UK">
+                        <option value="Brazil">
                     </datalist>
 
                     <label for='zip'>Zip-code: </label>
-                    <input type='number' id='zip' pattern='[0-9]' maxlength="5">
+                    <input type='text' id='zip' pattern='[0-9]+' required>
 
                     <label for='password'>Password: </label>
-                    <input type='password' id='password'>
+                    <input type='password' id='password' maxlength='18' minlength="5" pattern="([A-Za-z0-9]+)" required>
 
                     <label for='password-confirm'>Confirm Password: </label>
-                    <input type='password' id='password-confirm'>
+                    <input type='password' id='password-confirm' required>
 
-                    <input type='submit' value='Save'>
+                    <input type='submit' value='Save' id='submit'>
                 </fieldset>   
             </form>
         </section>
